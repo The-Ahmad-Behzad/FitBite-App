@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "318941108846",
+    "project_id": "fitbite-d59f7",
+    "storage_bucket": "fitbite-d59f7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:318941108846:android:c3045a323003e4ea70e47f",
+        "android_client_info": {
+          "package_name": "com.fitbite"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "318941108846-bsnca2b9a5v4omrfus6ghnk5go302fjc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyALGMUNRZO8hWRMtbaRvpXh0UlHKk_24oE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "318941108846-bsnca2b9a5v4omrfus6ghnk5go302fjc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
