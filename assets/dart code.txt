@@ -1,0 +1,1557 @@
+import 'package:flutter/material.dart';
+
+import 'maindrawer.dart';
+
+void main() =>
+    runApp(MaterialApp(debugShowCheckedModeBanner: false, home: MoodChoice()));
+
+class MoodChoice extends StatelessWidget {
+  const MoodChoice({Key? key}) : super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    return Stack(
+      children: <Widget>[
+        Scaffold(
+          appBar: AppBar(
+            title: const Text('FITBITE'),
+            backgroundColor: const Color(0xff054853),
+          ),
+          drawer: Drawer(
+            child: MainDrawer(), // Populate the Drawer in the next step.
+          ),
+          backgroundColor: Colors.white, // Set the background color to white
+          body: Center(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                SizedBox(height: 1),
+                Container(
+                  child: Image.asset(
+                    "asset/image.png",
+                    fit: BoxFit.fitWidth,
+                  ),
+                ),
+                //SizedBox(height: 2),
+                //Rect myRect = const Offset(1.0, 2.0) & const Size(3.0, 4.0);
+
+                Container(
+                  padding: EdgeInsets.only(left: 30, right: 30, top: 0.1),
+                  child: TextField(
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold, // Set the text to bold
+                      color: Colors.black, // Set the desired text color
+                    ),
+                    decoration: InputDecoration(
+                      hintText: 'Search',
+                      prefixIcon: Icon(Icons.search),
+                      filled: true,
+                      fillColor:
+                          Colors.grey[200], // Set the desired background color
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(25),
+                        borderSide: BorderSide(
+                          // Set the desired border color
+                          color: const Color(
+                              0xff504f4f), // Change the border fill color here
+                          width: 2, // Set the desired border width
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 10,
+                  width: 200,
+                ),
+                Container(
+                  padding: EdgeInsets.symmetric(horizontal: 80),
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              //malika ny yhaan apny first page ka link dalna
+                              builder: (BuildContext context) => Choices()));
+                    },
+                    child: Text(
+                      "                 Go to Cart",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: Colors.black87, // Set the desired text color
+                        fontSize: 15.0,
+                        letterSpacing: 2.0,
+                        fontFamily: 'Poppins',
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(height: 1),
+                Row(
+                  children: [
+                    Container(
+                      child: Column(
+                        children: [
+                          Container(
+                            padding: EdgeInsets.only(left: 70, right: 15),
+                            child: GestureDetector(
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (BuildContext context) =>
+                                            Choices()));
+                              },
+                              child: Image.asset(
+                                "asset/angry.png",
+                                width: 94,
+                                height: 94,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Container(
+                      child: Column(
+                        children: [
+                          Container(
+                            padding: EdgeInsets.only(left: 15),
+                            child: GestureDetector(
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (BuildContext context) =>
+                                            Choices()));
+                              },
+                              child: Image.asset(
+                                "asset/sad.png",
+                                width: 93,
+                                height: 93,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(height: 1),
+                Row(
+                  children: [
+                    Container(
+                      child: Column(
+                        children: [
+                          Container(
+                            padding: EdgeInsets.only(left: 70, right: 30),
+                            child: GestureDetector(
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (BuildContext context) =>
+                                            Choices()));
+                              },
+                              child: Image.asset(
+                                "asset/depressed.png",
+                                width: 93,
+                                height: 93,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Container(
+                      child: Column(
+                        children: [
+                          Container(
+                            // padding: EdgeInsets.symmetric(horizontal: 10),
+                            child: GestureDetector(
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (BuildContext context) =>
+                                            Choices()));
+                              },
+                              child: Image.asset(
+                                "asset/happy.png",
+                                width: 93,
+                                height: 93,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(height: 1),
+                Row(
+                  children: [
+                    Container(
+                      child: Column(
+                        children: [
+                          Container(
+                            padding: EdgeInsets.only(left: 70, right: 30),
+                            child: GestureDetector(
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (BuildContext context) =>
+                                            Choices()));
+                              },
+                              child: Image.asset(
+                                "asset/excited.png",
+                                width: 93,
+                                height: 93,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Container(
+                      child: Column(
+                        children: [
+                          Container(
+                            //padding: EdgeInsets.symmetric(horizontal: 10),
+                            child: GestureDetector(
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (BuildContext context) =>
+                                            Choices()));
+                              },
+                              child: Image.asset(
+                                "asset/confuse.png",
+                                width: 93,
+                                height: 93,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(height: 1),
+                Row(
+                  children: [
+                    Container(
+                      child: Column(
+                        children: [
+                          Container(
+                            padding: EdgeInsets.only(left: 70, right: 30),
+                            child: GestureDetector(
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (BuildContext context) =>
+                                            Choices()));
+                              },
+                              child: Image.asset(
+                                "asset/tired.png",
+                                width: 93,
+                                height: 93,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Container(
+                      child: Column(
+                        children: [
+                          Container(
+                            // padding: EdgeInsets.symmetric(horizontal: 10),
+                            child: GestureDetector(
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (BuildContext context) =>
+                                            Choices()));
+                              },
+                              child: Image.asset(
+                                "asset/bore.png",
+                                width: 94,
+                                height: 94,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+                Container(
+                  padding: EdgeInsets.only(left: 70),
+                  child: Text(
+                    "\nor you want to Choose food.\n",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: Colors.black87, // Set the desired text color
+                      fontSize: 14.0,
+                      letterSpacing: 2.0,
+                      fontFamily: 'Poppins',
+                    ),
+                  ),
+                ),
+
+                Container(
+                  padding: EdgeInsets.only(left: 147),
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (BuildContext context) => Choices()));
+                    },
+                    child: Text(
+                      "Click here.",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: Colors.black87, // Set the desired text color
+                        fontSize: 14.0,
+                        letterSpacing: 2.0,
+                        fontFamily: 'Poppins',
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+class Choices extends StatelessWidget {
+  const Choices({Key? key}) : super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    return Stack(
+      children: <Widget>[
+        Scaffold(
+          appBar: AppBar(
+            title: const Text('FITBITE'),
+            backgroundColor: const Color(0xff054853),
+          ),
+
+          drawer: Drawer(
+            child: MainDrawer(), // Populate the Drawer in the next step.
+          ),
+          backgroundColor: Colors.white, // Set the background color to white
+          body: Center(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                SizedBox(height: 1),
+                Container(
+                  child: Image.asset(
+                    "asset/imag.png",
+                    fit: BoxFit.fitWidth,
+                  ),
+                ),
+                //SizedBox(height: 2),
+                //Rect myRect = const Offset(1.0, 2.0) & const Size(3.0, 4.0);
+
+                Container(
+                  padding: EdgeInsets.only(left: 30, right: 30, top: 0.1),
+                  child: TextField(
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold, // Set the text to bold
+                      color: Colors.black, // Set the desired text color
+                    ),
+                    decoration: InputDecoration(
+                      hintText: 'Search',
+                      prefixIcon: Icon(Icons.search),
+                      filled: true,
+                      fillColor:
+                          Colors.grey[200], // Set the desired background color
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(25),
+                        borderSide: BorderSide(
+                          // Set the desired border color
+                          color: const Color(
+                              0xff504f4f), // Change the border fill color here
+                          width: 2, // Set the desired border width
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 10,
+                  width: 200,
+                ),
+                Column(
+                  children: [
+                    Container(
+                      padding: EdgeInsets.only(left: 170),
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (BuildContext context) =>
+                                      MoodChoice()));
+                        },
+                        child: Text(
+                          "    Return Back",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            color: Colors.black87, // Set the desired text color
+                            fontSize: 15.0,
+                            letterSpacing: 2.0,
+                            fontFamily: 'Poppins',
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(height: 1),
+                Row(
+                  children: [
+                    Container(
+                      padding: EdgeInsets.only(left: 75),
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (BuildContext context) => Sweet()));
+                        },
+                        child: Image.asset(
+                          "asset/sweet.png",
+                          width: 195,
+                          height: 140,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(height: 1),
+                Row(
+                  children: [
+                    Container(
+                      padding: EdgeInsets.only(left: 75),
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (BuildContext context) => Salty()));
+                        },
+                        child: Image.asset(
+                          "asset/salty.png",
+                          width: 195,
+                          height: 140,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(height: 1),
+                Row(
+                  children: [
+                    Container(
+                      padding: EdgeInsets.only(left: 75),
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (BuildContext context) =>
+                                      Healthy()));
+                        },
+                        child: Image.asset(
+                          "asset/healthy.png",
+                          width: 195,
+                          height: 140,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  height: 10,
+                  width: 200,
+                ),
+                Container(
+                  padding: EdgeInsets.only(left: 170),
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (BuildContext context) => Choices2()));
+                    },
+                    child: Text(
+                      "    More Options",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: Colors.black87, // Set the desired text color
+                        fontSize: 15.0,
+                        letterSpacing: 2.0,
+                        fontFamily: 'Poppins',
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+class Choices2 extends StatelessWidget {
+  const Choices2({Key? key}) : super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    return Stack(
+      children: <Widget>[
+        Scaffold(
+          appBar: AppBar(
+            title: const Text('FITBITE'),
+            backgroundColor: const Color(0xff054853),
+          ),
+
+          drawer: Drawer(
+            child: MainDrawer(), // Populate the Drawer in the next step.
+          ),
+          backgroundColor: Colors.white, // Set the background color to white
+          body: Center(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                SizedBox(height: 1),
+                Container(
+                  child: Image.asset(
+                    "asset/imag.png",
+                    fit: BoxFit.fitWidth,
+                  ),
+                ),
+                Container(
+                  padding: EdgeInsets.only(left: 30, right: 30, top: 0.1),
+                  child: TextField(
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold, // Set the text to bold
+                      color: Colors.black, // Set the desired text color
+                    ),
+                    decoration: InputDecoration(
+                      hintText: 'Search',
+                      prefixIcon: Icon(Icons.search),
+                      filled: true,
+                      fillColor:
+                          Colors.grey[200], // Set the desired background color
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(25),
+                        borderSide: BorderSide(
+                          // Set the desired border color
+                          color: const Color(
+                              0xff504f4f), // Change the border fill color here
+                          width: 2, // Set the desired border width
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                // Expanded(child: Container()),
+                SizedBox(
+                  height: 10,
+                  width: 200,
+                ),
+                Container(
+                  padding: EdgeInsets.only(left: 170),
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (BuildContext context) => Choices()));
+                    },
+                    child: Text(
+                      "    Return Back",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: Colors.black87, // Set the desired text color
+                        fontSize: 15.0,
+                        letterSpacing: 2.0,
+                        fontFamily: 'Poppins',
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(height: 1),
+                Row(
+                  children: [
+                    Container(
+                      padding: EdgeInsets.only(left: 75),
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (BuildContext context) => Savory()));
+                        },
+                        child: Image.asset(
+                          "asset/savory.png",
+                          width: 195,
+                          height: 140,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(height: 1),
+                Row(
+                  children: [
+                    Container(
+                      padding: EdgeInsets.only(left: 75),
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (BuildContext context) => Spicy()));
+                        },
+                        child: Image.asset(
+                          "asset/spicy.png",
+                          width: 195,
+                          height: 140,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(height: 1),
+                Row(
+                  children: [
+                    Container(
+                      padding: EdgeInsets.only(left: 75),
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (BuildContext context) => Drinks()));
+                        },
+                        child: Image.asset(
+                          "asset/drinks.png",
+                          width: 195,
+                          height: 140,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  height: 10,
+                  width: 200,
+                ),
+                Container(
+                  padding: EdgeInsets.only(left: 170),
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              //malika ny yhaan apny first page ka link dalna
+                              builder: (BuildContext context) => MoodChoice()));
+                    },
+                    child: Text(
+                      "    Go to Cart",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: Colors.black87, // Set the desired text color
+                        fontSize: 15.0,
+                        letterSpacing: 2.0,
+                        fontFamily: 'Poppins',
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+class Sweet extends StatelessWidget {
+  const Sweet({Key? key}) : super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.white, // Set the background color to white
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          SizedBox(height: 1),
+          Container(
+            child: Image.asset(
+              "asset/imag.png",
+              fit: BoxFit.fitWidth,
+            ),
+          ),
+
+          Container(
+            padding: EdgeInsets.only(left: 30, right: 30, top: 0.1),
+            child: TextField(
+              style: TextStyle(
+                fontWeight: FontWeight.bold, // Set the text to bold
+                color: Colors.black, // Set the desired text color
+              ),
+              decoration: InputDecoration(
+                hintText: 'Search',
+                prefixIcon: Icon(Icons.search),
+                filled: true,
+                fillColor: Colors.grey[200], // Set the desired background color
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(25),
+                  borderSide: BorderSide(
+                    // Set the desired border color
+                    color: const Color(
+                        0xff504f4f), // Change the border fill color here
+                    width: 2, // Set the desired border width
+                  ),
+                ),
+              ),
+            ),
+          ),
+          // Expanded(child: Container()),
+          SizedBox(
+            height: 10,
+            width: 200,
+          ),
+          Column(
+            children: [
+              Container(
+                padding: EdgeInsets.only(left: 170),
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (BuildContext context) => Choices()));
+                  },
+                  child: Text(
+                    "    Return Back",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: Colors.black87, // Set the desired text color
+                      fontSize: 15.0,
+                      letterSpacing: 2.0,
+                      fontFamily: 'Poppins',
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+
+          SizedBox(height: 1),
+          Row(
+            children: [
+              Container(
+                padding: EdgeInsets.only(left: 75),
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            //malika ny yhaan apny first page ka link dalna
+                            builder: (BuildContext context) => Sweet()));
+                  },
+                  child: Image.asset(
+                    "asset/AcaiBowl.png",
+                    width: 200,
+                    height: 150,
+                  ),
+                ),
+              ),
+            ],
+          ),
+          SizedBox(height: 1),
+          Row(
+            children: [
+              Container(
+                padding: EdgeInsets.only(left: 75),
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            //malika ny yhaan apny first page ka link dalna
+                            builder: (BuildContext context) => MoodChoice()));
+                  },
+                  child: Image.asset(
+                    "asset/FruitSalad.png",
+                    width: 200,
+                    height: 150,
+                  ),
+                ),
+              ),
+            ],
+          ),
+          SizedBox(height: 1),
+          Row(
+            children: [
+              Container(
+                padding: EdgeInsets.only(left: 75),
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            //malika ny yhaan apny first page ka link dalna
+                            builder: (BuildContext context) => MoodChoice()));
+                  },
+                  child: Image.asset(
+                    "asset/dessert.png",
+                    width: 200,
+                    height: 150,
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class Salty extends StatelessWidget {
+  const Salty({Key? key}) : super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.white, // Set the background color to white
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          SizedBox(height: 1),
+          Container(
+            child: Image.asset(
+              "asset/imag.png",
+              fit: BoxFit.fitWidth,
+            ),
+          ),
+
+          Container(
+            padding: EdgeInsets.only(left: 30, right: 30, top: 0.1),
+            child: TextField(
+              style: TextStyle(
+                fontWeight: FontWeight.bold, // Set the text to bold
+                color: Colors.black, // Set the desired text color
+              ),
+              decoration: InputDecoration(
+                hintText: 'Search',
+                prefixIcon: Icon(Icons.search),
+                filled: true,
+                fillColor: Colors.grey[200], // Set the desired background color
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(25),
+                  borderSide: BorderSide(
+                    // Set the desired border color
+                    color: const Color(
+                        0xff504f4f), // Change the border fill color here
+                    width: 2, // Set the desired border width
+                  ),
+                ),
+              ),
+            ),
+          ),
+          // Expanded(child: Container()),
+          SizedBox(
+            height: 10,
+            width: 200,
+          ),
+          Column(
+            children: [
+              Container(
+                padding: EdgeInsets.only(left: 170),
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (BuildContext context) => Choices()));
+                  },
+                  child: Text(
+                    "    Return Back",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: Colors.black87, // Set the desired text color
+                      fontSize: 15.0,
+                      letterSpacing: 2.0,
+                      fontFamily: 'Poppins',
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+
+          SizedBox(height: 1),
+          Row(
+            children: [
+              Container(
+                padding: EdgeInsets.only(left: 75),
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            //malika ny yhaan apny first page ka link dalna
+                            builder: (BuildContext context) => Sweet()));
+                  },
+                  child: Image.asset(
+                    "asset/pulao.png",
+                    width: 200,
+                    height: 150,
+                  ),
+                ),
+              ),
+            ],
+          ),
+          SizedBox(height: 1),
+          Row(
+            children: [
+              Container(
+                padding: EdgeInsets.only(left: 75),
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            //malika ny yhaan apny first page ka link dalna
+                            builder: (BuildContext context) => MoodChoice()));
+                  },
+                  child: Image.asset(
+                    "asset/fried-rice.png",
+                    width: 200,
+                    height: 150,
+                  ),
+                ),
+              ),
+            ],
+          ),
+          SizedBox(height: 1),
+          Row(
+            children: [
+              Container(
+                padding: EdgeInsets.only(left: 75),
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            //malika ny yhaan apny first page ka link dalna
+                            builder: (BuildContext context) => MoodChoice()));
+                  },
+                  child: Image.asset(
+                    "asset/chickenrice.png",
+                    width: 200,
+                    height: 150,
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class Healthy extends StatelessWidget {
+  const Healthy({Key? key}) : super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.white, // Set the background color to white
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          SizedBox(height: 1),
+          Container(
+            child: Image.asset(
+              "asset/imag.png",
+              fit: BoxFit.fitWidth,
+            ),
+          ),
+
+          Container(
+            padding: EdgeInsets.only(left: 30, right: 30, top: 0.1),
+            child: TextField(
+              style: TextStyle(
+                fontWeight: FontWeight.bold, // Set the text to bold
+                color: Colors.black, // Set the desired text color
+              ),
+              decoration: InputDecoration(
+                hintText: 'Search',
+                prefixIcon: Icon(Icons.search),
+                filled: true,
+                fillColor: Colors.grey[200], // Set the desired background color
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(25),
+                  borderSide: BorderSide(
+                    // Set the desired border color
+                    color: const Color(
+                        0xff504f4f), // Change the border fill color here
+                    width: 2, // Set the desired border width
+                  ),
+                ),
+              ),
+            ),
+          ),
+          // Expanded(child: Container()),
+          SizedBox(
+            height: 10,
+            width: 200,
+          ),
+          Column(
+            children: [
+              Container(
+                padding: EdgeInsets.only(left: 170),
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (BuildContext context) => Choices()));
+                  },
+                  child: Text(
+                    "    Return Back",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: Colors.black87, // Set the desired text color
+                      fontSize: 15.0,
+                      letterSpacing: 2.0,
+                      fontFamily: 'Poppins',
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+
+          SizedBox(height: 1),
+          Row(
+            children: [
+              Container(
+                padding: EdgeInsets.only(left: 75),
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            //malika ny yhaan apny first page ka link dalna
+                            builder: (BuildContext context) => Sweet()));
+                  },
+                  child: Image.asset(
+                    "asset/greensalad.png",
+                    width: 200,
+                    height: 150,
+                  ),
+                ),
+              ),
+            ],
+          ),
+          SizedBox(height: 1),
+          Row(
+            children: [
+              Container(
+                padding: EdgeInsets.only(left: 75),
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            //malika ny yhaan apny first page ka link dalna
+                            builder: (BuildContext context) => MoodChoice()));
+                  },
+                  child: Image.asset(
+                    "asset/egg.png",
+                    width: 200,
+                    height: 150,
+                  ),
+                ),
+              ),
+            ],
+          ),
+          SizedBox(height: 1),
+          Row(
+            children: [
+              Container(
+                padding: EdgeInsets.only(left: 75),
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            //malika ny yhaan apny first page ka link dalna
+                            builder: (BuildContext context) => MoodChoice()));
+                  },
+                  child: Image.asset(
+                    "asset/beans.png",
+                    width: 200,
+                    height: 150,
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class Savory extends StatelessWidget {
+  const Savory({Key? key}) : super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.white, // Set the background color to white
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          SizedBox(height: 1),
+          Container(
+            child: Image.asset(
+              "asset/imag.png",
+              fit: BoxFit.fitHeight,
+            ),
+          ),
+
+          Container(
+            padding: EdgeInsets.only(left: 30, right: 30, top: 0.1),
+            child: TextField(
+              style: TextStyle(
+                fontWeight: FontWeight.bold, // Set the text to bold
+                color: Colors.black, // Set the desired text color
+              ),
+              decoration: InputDecoration(
+                hintText: 'Search',
+                prefixIcon: Icon(Icons.search),
+                filled: true,
+                fillColor: Colors.grey[200], // Set the desired background color
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(25),
+                  borderSide: BorderSide(
+                    // Set the desired border color
+                    color: const Color(
+                        0xff504f4f), // Change the border fill color here
+                    width: 2, // Set the desired border width
+                  ),
+                ),
+              ),
+            ),
+          ),
+          // Expanded(child: Container()),
+          SizedBox(
+            height: 10,
+            width: 200,
+          ),
+          Column(
+            children: [
+              Container(
+                padding: EdgeInsets.only(left: 170),
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (BuildContext context) => Choices2()));
+                  },
+                  child: Text(
+                    "   Return Back",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: Colors.black87, // Set the desired text color
+                      fontSize: 15.0,
+                      letterSpacing: 2.0,
+                      fontFamily: 'Poppins',
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+
+          SizedBox(height: 1),
+          Row(
+            children: [
+              Container(
+                padding: EdgeInsets.only(left: 75),
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            //malika ny yhaan apny first page ka link dalna
+                            builder: (BuildContext context) => Sweet()));
+                  },
+                  child: Image.asset(
+                    "asset/samosy.png",
+                    width: 200,
+                    height: 150,
+                  ),
+                ),
+              ),
+            ],
+          ),
+          SizedBox(height: 1),
+          Row(
+            children: [
+              Container(
+                padding: EdgeInsets.only(left: 75),
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            //malika ny yhaan apny first page ka link dalna
+                            builder: (BuildContext context) => MoodChoice()));
+                  },
+                  child: Image.asset(
+                    "asset/pakory.png",
+                    width: 200,
+                    height: 150,
+                  ),
+                ),
+              ),
+            ],
+          ),
+          SizedBox(height: 1),
+          Row(
+            children: [
+              Container(
+                padding: EdgeInsets.only(left: 75),
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            //malika ny yhaan apny first page ka link dalna
+                            builder: (BuildContext context) => MoodChoice()));
+                  },
+                  child: Image.asset(
+                    "asset/fries.png",
+                    width: 200,
+                    height: 150,
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class Spicy extends StatelessWidget {
+  const Spicy({Key? key}) : super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.white, // Set the background color to white
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          SizedBox(height: 1),
+          Container(
+            child: Image.asset(
+              "asset/imag.png",
+              fit: BoxFit.fitWidth,
+            ),
+          ),
+
+          Container(
+            padding: EdgeInsets.only(left: 30, right: 30, top: 0.1),
+            child: TextField(
+              style: TextStyle(
+                fontWeight: FontWeight.bold, // Set the text to bold
+                color: Colors.black, // Set the desired text color
+              ),
+              decoration: InputDecoration(
+                hintText: 'Search',
+                prefixIcon: Icon(Icons.search),
+                filled: true,
+                fillColor: Colors.grey[200], // Set the desired background color
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(25),
+                  borderSide: BorderSide(
+                    // Set the desired border color
+                    color: const Color(
+                        0xff504f4f), // Change the border fill color here
+                    width: 2, // Set the desired border width
+                  ),
+                ),
+              ),
+            ),
+          ),
+          // Expanded(child: Container()),
+          SizedBox(
+            height: 10,
+            width: 200,
+          ),
+          Column(
+            children: [
+              Container(
+                padding: EdgeInsets.only(left: 170),
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (BuildContext context) => Choices2()));
+                  },
+                  child: Text(
+                    "   Return Back",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: Colors.black87, // Set the desired text color
+                      fontSize: 15.0,
+                      letterSpacing: 2.0,
+                      fontFamily: 'Poppins',
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+
+          SizedBox(height: 1),
+          Row(
+            children: [
+              Container(
+                padding: EdgeInsets.only(left: 75),
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            //malika ny yhaan apny first page ka link dalna
+                            builder: (BuildContext context) => Sweet()));
+                  },
+                  child: Image.asset(
+                    "asset/Jjigae.png",
+                    width: 200,
+                    height: 150,
+                  ),
+                ),
+              ),
+            ],
+          ),
+          SizedBox(height: 1),
+          Row(
+            children: [
+              Container(
+                padding: EdgeInsets.only(left: 75),
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            //malika ny yhaan apny first page ka link dalna
+                            builder: (BuildContext context) => MoodChoice()));
+                  },
+                  child: Image.asset(
+                    "asset/Tteok-bokki.png",
+                    width: 200,
+                    height: 150,
+                  ),
+                ),
+              ),
+            ],
+          ),
+          SizedBox(height: 1),
+          Row(
+            children: [
+              Container(
+                padding: EdgeInsets.only(left: 75),
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            //malika ny yhaan apny first page ka link dalna
+                            builder: (BuildContext context) => MoodChoice()));
+                  },
+                  child: Image.asset(
+                    "asset/K-friendchiken.png",
+                    width: 200,
+                    height: 150,
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class Drinks extends StatelessWidget {
+  const Drinks({Key? key}) : super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.white, // Set the background color to white
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          SizedBox(height: 1),
+          Container(
+            child: Image.asset(
+              "asset/imag.png",
+              fit: BoxFit.fitWidth,
+            ),
+          ),
+
+          Container(
+            padding: EdgeInsets.only(left: 30, right: 30, top: 0.1),
+            child: TextField(
+              style: TextStyle(
+                fontWeight: FontWeight.bold, // Set the text to bold
+                color: Colors.black, // Set the desired text color
+              ),
+              decoration: InputDecoration(
+                hintText: 'Search',
+                prefixIcon: Icon(Icons.search),
+                filled: true,
+                fillColor: Colors.grey[200], // Set the desired background color
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(25),
+                  borderSide: BorderSide(
+                    // Set the desired border color
+                    color: const Color(
+                        0xff504f4f), // Change the border fill color here
+                    width: 2, // Set the desired border width
+                  ),
+                ),
+              ),
+            ),
+          ),
+          // Expanded(child: Container()),
+          SizedBox(
+            height: 10,
+            width: 200,
+          ),
+          Column(
+            children: [
+              Container(
+                padding: EdgeInsets.only(left: 170),
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (BuildContext context) => Choices2()));
+                  },
+                  child: Text(
+                    "    Return Back",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: Colors.black87, // Set the desired text color
+                      fontSize: 15.0,
+                      letterSpacing: 2.0,
+                      fontFamily: 'Poppins',
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+
+          SizedBox(height: 1),
+          Row(
+            children: [
+              Container(
+                padding: EdgeInsets.only(left: 75),
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            //malika ny yhaan apny first page ka link dalna
+                            builder: (BuildContext context) => Sweet()));
+                  },
+                  child: Image.asset(
+                    "asset/juice.png",
+                    width: 200,
+                    height: 150,
+                  ),
+                ),
+              ),
+            ],
+          ),
+          SizedBox(height: 1),
+          Row(
+            children: [
+              Container(
+                padding: EdgeInsets.only(left: 75),
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            //malika ny yhaan apny first page ka link dalna
+                            builder: (BuildContext context) => MoodChoice()));
+                  },
+                  child: Image.asset(
+                    "asset/yakhni.png",
+                    width: 200,
+                    height: 150,
+                  ),
+                ),
+              ),
+            ],
+          ),
+          SizedBox(height: 1),
+          Row(
+            children: [
+              Container(
+                padding: EdgeInsets.only(left: 75),
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            //malika ny yhaan apny first page ka link dalna
+                            builder: (BuildContext context) => MoodChoice()));
+                  },
+                  child: Image.asset(
+                    "asset/colddrink.png",
+                    width: 200,
+                    height: 150,
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+}
